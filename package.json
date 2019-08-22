@@ -1,0 +1,12 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Droidion/homepage.git",
+  "author": "Denis Rodionov <zunh@protonmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.22.10"
+  }
+}
