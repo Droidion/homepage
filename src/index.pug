@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    include templates/head.pug
+  body
+    .content
+      .data
+        h1 Denis Rodionov
+        .subtitle
+          | Web developer
+        ul.technologies
+          include templates/technologies.pug
+        .ideology
+          | Strong typing. Actors. Balance between OOP&nbsp;&amp; functional worlds
+    include templates/footer.pug

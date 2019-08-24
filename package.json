@@ -5,8 +5,14 @@
   "repository": "https://github.com/Droidion/homepage.git",
   "author": "Denis Rodionov <zunh@protonmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.4",
     "sass": "^1.22.10"
   }
 }
