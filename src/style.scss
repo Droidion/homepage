@@ -1,6 +1,6 @@
-@import 'styles/reset';
 @import 'styles/fonts';
 @import 'styles/colors';
+@import 'styles/base';
 
 html,
 body {
@@ -72,7 +72,6 @@ footer {
     li {
       &:hover {
         cursor: pointer;
-        text-decoration: underline;
       }
     }
   }

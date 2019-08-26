@@ -1,0 +1,22 @@
+a {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    background-color: #8fbcbb;
+    bottom: -2px;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transition: 0.2s;
+    width: 0;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
