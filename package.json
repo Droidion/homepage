@@ -15,5 +15,8 @@
     "parcel-plugin-compress": "^2.0.2",
     "pug": "^3.0.0",
     "sass": "^1.29.0"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
   }
 }

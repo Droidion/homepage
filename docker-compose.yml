@@ -1,0 +1,7 @@
+version: '3'
+services:
+  homepage:
+    container_name: homepage
+    build: .
+    ports:
+      - "7373:7373"
