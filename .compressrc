@@ -1,0 +1,38 @@
+{
+  // a regular expression to test filenames against
+  "test": ".",
+  // a number that represents the minimum filesize to compress, in bytes
+  "threshold": undefined,
+  // Concurrency limit for p-queue
+  concurrency: 2,
+  // configuration options for gzip compression
+  "gzip": {
+    "enabled": true,
+    "numiterations": 15,
+    "blocksplitting": true,
+    "blocksplittinglast": false,
+    "blocksplittingmax": 15,
+    // use zlib instead of zopfli if zlib is true
+    "zlib": false,
+    "zlibLevel": 9,
+    "zlibMemLevel": 9
+  },
+  // configuration options for brotli compress
+  "brotli": {
+    "enabled": true,
+    "mode": 0, // 0 = generic, 1 = text, 2 = font (used in WOFF 2.0)
+    "quality": 11, // 0 - 11, 11 = best
+    "lgwin": 24, // 10 - 24    
+    "enable_context_modeling": true, // disabling decreases compression ratio in favour of decompression speed
+    "lgblock": undefined, // 16 - 24
+    "nPostfix": undefined, // 0 - 3
+    "nDirect": undefined // 0 to (15 << nPostfix) in steps of (1 << nPostfix)
+  },
+  // a flag that changes the behavior of the plugin, by default this option is disabled
+  // and the plugin compresses all the files it receives via the Parcel bundle object
+  // and match the test regular expression
+  //	
+  // if true the plugin compresses all files in the output directory and subdirectories
+  // that match the test regular expression
+  compressOutput: false
+}
