@@ -13,7 +13,7 @@
     "cssnano": "^4.1.10",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-compress": "^2.0.2",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "sass": "^1.29.0"
   },
   "dependencies": {
