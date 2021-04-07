@@ -4,8 +4,8 @@ Uber simple placeholder html page form my private domain [zunh.dev](https://zunh
 
 ## Prequisites
 
-- [Node](https://nodejs.org/en/)
-- [pnpm](https://pnpm.io)
+- [Node](https://nodejs.org/en/) for runtime
+- [pnpm](https://pnpm.io) for package management
 
 ## Run in development
 
