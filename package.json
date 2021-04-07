@@ -10,11 +10,15 @@
     "build": "parcel build src/index.pug && cp src/images/social-preview.png dist"
   },
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "parcel-bundler": "^1.12.4",
+    "@parcel/packager-raw-url": "2.0.0-beta.2",
+    "@parcel/transformer-pug": "2.0.0-beta.2",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "2.0.0-beta.2",
+    "cssnano": "^4.1.11",
+    "parcel": "^2.0.0-beta.2",
     "parcel-plugin-compress": "^2.0.2",
-    "pug": "^3.0.0",
-    "sass": "^1.29.0"
+    "pug": "^3.0.2",
+    "sass": "^1.32.8"
   },
   "dependencies": {
     "http-server": "^0.12.3"
