@@ -9,17 +9,17 @@
     "build": "parcel build src/index.pug && cp src/images/social-preview.png dist"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "2.0.0-nightly.2344+ff6b7b4e",
-    "@parcel/transformer-pug": "2.0.0-nightly.722+ff6b7b4e",
-    "@parcel/transformer-sass": "2.0.0-nightly.722+ff6b7b4e",
-    "@parcel/transformer-webmanifest": "2.0.0-nightly.2344+ff6b7b4e",
-    "cssnano": "^5.0.6",
-    "parcel": "^2.0.0-beta.3.1",
+    "@parcel/packager-raw-url": "2.2.0",
+    "@parcel/transformer-pug": "2.2.0",
+    "@parcel/transformer-sass": "2.2.0",
+    "@parcel/transformer-webmanifest": "2.2.0",
+    "cssnano": "^5.0.15",
+    "parcel": "^2.2.0",
     "parcel-plugin-compress": "^2.0.2",
     "pug": "^3.0.2",
-    "sass": "^1.34.1"
+    "sass": "^1.48.0"
   },
   "dependencies": {
-    "http-server": "^0.12.3"
+    "http-server": "^14.1.0"
   }
 }
