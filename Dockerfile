@@ -1,10 +1,15 @@
-FROM node:alpine
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY package.json /usr/src/app/
-COPY pnpm-lock.yaml /usr/src/app/
-RUN npm install
-COPY ./src /usr/src/app/src
-RUN npm run build
+FROM node:current-alpine3.16 as build-stage
+WORKDIR /app
+RUN npm install -g pnpm
+COPY pnpm-lock.yaml ./
+RUN --mount=type=cache,id=pnpm-store,target=/root/.pnpm-store\
+      pnpm fetch
+COPY . ./
+RUN --mount=type=cache,id=pnpm-store,target=/root/.pnpm-store\
+     pnpm -r install --frozen-lockfile --offline
+RUN pnpm run build
+
+FROM node:current-alpine3.16 as  production-stage
+COPY --from=build-stage /app/dist /app/dist
 EXPOSE 7373
-CMD npx http-server ./dist -d false -g -b -p 7373
+CMD npx http-server /app/dist -d false -g -b -p 7373
